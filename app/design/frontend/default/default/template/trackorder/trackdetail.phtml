@@ -21,7 +21,9 @@ $shipTrack = array();
 </div>
 
 <p><?php echo $this->__("Your Order Status is :")?> <strong><?php echo $order->getStatusLabel() ?></strong></p>
+<p><?php echo $this->__("Click")?> <a target="_blank" href="<?php echo Mage::getBaseUrl().'trackorder/index/view/'.$order->getTrackLink();?>"><strong><?php echo $this->__(' here');?></strong></a><?php echo $this->__(" to view your Order Detail.");?></p>
 
+    
 <?php if(sizeof($_results)>0): ?>
 <?php foreach($_results as $shipid => $_result): ?>
     <?php if($shipid): ?>

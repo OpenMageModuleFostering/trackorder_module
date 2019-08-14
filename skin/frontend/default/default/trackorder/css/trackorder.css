@@ -6,3 +6,8 @@
 .track-data-table{ margin-bottom:20px;}
 
 .order-info-message{ padding-top: 15px;}
+
+.block-trackorder .block-content{ padding: 5px 10px;}
+
+.block-trackorder .block-title strong {   background-image: url("../images/i-trackorder.png"); background-position: 0 0;
+    background-repeat: no-repeat;   padding-left: 21px;}

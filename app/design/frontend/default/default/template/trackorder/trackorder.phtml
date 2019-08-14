@@ -3,7 +3,8 @@
     ?>
     <div class="page-title"><h1><?php echo $this->__('Track Your Order ') ?></h1></div>
     <div class="form-list">
-        <form name="track_order" id="track_order" action="" method="post" onsubmit="sendAjax('track_order','<?php  echo Mage::getUrl('*/*/track');?>'); return false;">            
+        <form name="track_order" id="track_order" action="" method="post" onsubmit="sendAjax('track_order','<?php  echo Mage::getUrl('*/*/track');?>'); return false;">
+        <!--<form name="track_order" method="post" id="track_order" action="<?php echo Mage::getUrl('*/*/view');?>">-->
             <ul class="form-list">
                 <li>
                     <label for="order_id" class="required"><em>*</em><?php echo $this->__('Order Id') ?></label>
@@ -19,7 +20,9 @@
                 </li>
             </ul>
             <div class="buttons-set">
-                <button type="submit" class="button" title="<?php echo $this->__('Track Order') ?>" name="track" id="track"><span><span><?php echo $this->__('Track Order') ?></span></span></button>
+               <button type="submit" class="button" title="<?php echo $this->__('Track Order') ?>" name="track" id="track">
+                    <span><span><?php echo $this->__('Track Order') ?></span></span>
+                </button>
             </div>
 
         </form>
@@ -47,10 +50,13 @@
             }
             var data = $(frmId).serialize(this);
             $("loading-details").show();
-            new Ajax.Updater(
+            
+      
+        new Ajax.Updater(
                 {
                     success:"oderinfo"
-                }, 
+                },
+                
                 url,
                 {
                     asynchronous:true,
