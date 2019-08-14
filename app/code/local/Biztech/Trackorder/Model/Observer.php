@@ -64,13 +64,13 @@ class Biztech_Trackorder_Model_Observer {
             }
 
             $order = $observer->getEvent()->getOrder();
-		self::$_handleTrackLinkCounter++;
-            	if ($order->getTrackLink() == NULL) {
+        self::$_handleTrackLinkCounter++;
+                if ($order->getTrackLink() == NULL) {
                 $trackLink = substr(md5(microtime()), rand(0, 26), 6);
- 		
-		$order->setTrackLink($trackLink);
-	    }
-	}	
+         
+        $order->setTrackLink($trackLink);
+        }
+    }    
     }
     
     public function addlinkFront(Varien_Event_Observer $observer) {
@@ -80,13 +80,13 @@ class Biztech_Trackorder_Model_Observer {
                 return $this;
             }
 
-  		$order = $observer->getEvent()->getOrder();
-		self::$_handleTrackLinkCounter++;
-            	if ($order->getTrackLink() == NULL) {
+          $order = $observer->getEvent()->getOrder();
+        self::$_handleTrackLinkCounter++;
+                if ($order->getTrackLink() == NULL) {
                 $trackLink = substr(md5(microtime()), rand(0, 26), 6);
                 $order->setTrackLink($trackLink);               
             }
-	}
+    }
     }
     
     
@@ -94,12 +94,12 @@ class Biztech_Trackorder_Model_Observer {
 
         if (Mage::app()->getRequest()->getControllerName() == 'multishipping') {
                 $order = $observer->getEvent()->getOrder();
-		
-            	if ($order->getTrackLink() == NULL) {
+        
+                if ($order->getTrackLink() == NULL) {
                 $trackLink = substr(md5(microtime()), rand(0, 26), 6);
                 $order->setTrackLink($trackLink);               
             }
-	}
+    }
     }
 
 }

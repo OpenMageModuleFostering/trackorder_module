@@ -10,7 +10,7 @@
 <config>
     <modules>
         <Biztech_Trackorder>
-            <version>0.1.4</version>
+            <version>0.1.5</version>
         </Biztech_Trackorder>
     </modules>
     <frontend>
@@ -30,37 +30,16 @@
                 </trackorder>
             </updates>
         </layout>
-         <events>
-            <sales_order_save_after>
-                <observers>
-                    <trackorder_link>
-                        <type>singleton</type>
-                        <class>trackorder/observer</class>
-                        <method>addlinkFront</method>
-                    </trackorder_link>
-                </observers>
-            </sales_order_save_after>
-            <checkout_type_multishipping_create_orders_single>
-                <observers>
-                    <trackorder_multishiplink>
-                        <type>singleton</type>
-                        <class>trackorder/observer</class>
-                        <method>addmultishipLink</method>
-                    </trackorder_multishiplink>
-                </observers>
-            </checkout_type_multishipping_create_orders_single>
-
-        </events>
     </frontend>
-    <admin>
+     <admin>
         <routers>
-            <trackorder>
-                <use>admin</use>
-                <args>
-                    <module>Biztech_Trackorder</module>
-                    <frontName>trackorder</frontName>
-                </args>
-            </trackorder>
+            <adminhtml>
+                    <args>
+                    <modules>
+                        <trackorder after="Mage_Adminhtml">Biztech_Trackorder_Adminhtml</trackorder>
+                        </modules>
+                    </args>
+                </adminhtml>    
         </routers>
     </admin>
     <adminhtml>
@@ -133,6 +112,26 @@
                 </entities>
             </trackorder_mysql4>
         </models>
+        <events>
+            <sales_order_save_after>
+                <observers>
+                    <trackorder_link>
+                        <type>singleton</type>
+                        <class>trackorder/observer</class>
+                        <method>addlinkFront</method>
+                    </trackorder_link>
+                </observers>
+            </sales_order_save_after>
+            <checkout_type_multishipping_create_orders_single>
+                <observers>
+                    <trackorder_multishiplink>
+                        <type>singleton</type>
+                        <class>trackorder/observer</class>
+                        <method>addmultishipLink</method>
+                    </trackorder_multishiplink>
+                </observers>
+            </checkout_type_multishipping_create_orders_single>
+        </events>
         <resources>
             <trackorder_setup>
                 <setup>
