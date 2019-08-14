@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<package>
+    <name>trackorder_module</name>
+    <version>0.1.0</version>
+    <stability>stable</stability>
+    <license uri="http://opensource.org/licenses/osl-3.0.php">OSL v3.0</license>
+    <channel>community</channel>
+    <extends/>
+    <summary>Track Order Extension allows the buyers to check the status of their orders without logging in to their account. </summary>
+    <description>Our &#x201C;Track Order&#x201D; Extension allows the buyers to check the status of their orders without logging in to their account. Customer can also check the tracking information of shipment using this extension. &#xD;
+A link called &#x201C;Track Order&#x201D; will be automatically inserted in the header part and footer menu of the site. The customer (buyer) will simply have to fill the order number and email address, and they will be shown the order status with all its details including the shipment tracking information. The details will include links to shipment provider&#x2019;s site to track order directly.&#xD;
+Key Features of the Extension&#xD;
+&#x2022;	Customer allowed to track order without login&#xD;
+&#x2022;	Show Order status&#xD;
+&#x2022;	Show Order Shipment Tracking&#xD;
+&#x2022;	Show Links to Shipment Provider&#x2019;s site&#xD;
+</description>
+    <notes>-New Release</notes>
+    <authors><author><name>Biztech</name><user>biztechcon</user><email>sales@biztechconsultancy.com</email></author></authors>
+    <date>2014-01-07</date>
+    <time>10:43:17</time>
+    <contents><target name="mageetc"><dir name="modules"><file name="Biztech_Trackorder.xml" hash="2dc128b849316f8f053e2d482ab2ec04"/></dir></target><target name="magelocal"><dir name="Biztech"><dir name="Trackorder"><dir name="Block"><file name="Trackorder.php" hash="07689f6dca91b08cf48e9d73edab159d"/></dir><dir name="Helper"><file name="Data.php" hash="66c8dcb0194732d45383e99cd7403e3a"/></dir><dir name="controllers"><file name="IndexController.php" hash="82a4234b51982a8cec2f8c4bb5f72537"/></dir><dir name="etc"><file name="config.xml" hash="c51229574a50dc3a444d35ca37082521"/><file name="system.xml" hash="10f6fc3bf3604e1ac384d71f3992f260"/></dir></dir></dir></target><target name="magedesign"><dir name="frontend"><dir name="default"><dir name="default"><dir name="layout"><file name="trackorder.xml" hash="0d6b3c2976c965a8ccc4fb673f404d30"/></dir><dir name="template"><dir name="trackorder"><file name="trackdetail.phtml" hash="6ba0cbb0c33bab8ad7aa4845c931994a"/><file name="trackorder.phtml" hash="9c79ce025d46e9640ddaa614ff8f8032"/></dir></dir></dir></dir></dir></target><target name="mageskin"><dir name="frontend"><dir name="default"><dir name="default"><dir name="trackorder"><dir name="css"><file name="trackorder.css" hash="0881bdff2e8cc79c4fbc127e7d62283e"/></dir><dir name="images"><file name="Thumbs.db" hash="2e44a69c8cd5d418657605eeaef20c08"/><file name="ajax-loader-tr.gif" hash="1ae32bc8232ff2527c627e5b38eb319a"/><file name="ajax-loader.gif" hash="57ca1a2085d82f0574e3ef740b9a5ead"/><file name="main-bg.png" hash="615e539beac7fc4ad7b6aa7e519ca2ee"/></dir></dir></dir></dir></dir></target></contents>
+    <compatible/>
+    <dependencies><required><php><min>5.1.0</min><max>6.0.0</max></php></required></dependencies>
+</package>

@@ -1,0 +1,16 @@
+{
+    "name": "OpenMageModuleFostering/trackorder_module",
+    "type": "magento-module",
+    "license": "OSL-v3.0",
+    "homepage": "",
+    "description": "Track Order Extension allows the buyers to check the status of their orders without logging in to their account. ",
+    "authors": [
+    {
+        "name": "Biztech",
+        "email": "sales@biztechconsultancy.com"
+    }
+],
+    "suggest": {
+        "magento-hackathon/magento-composer-installer": "*"
+    }
+}
