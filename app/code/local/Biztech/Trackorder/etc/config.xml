@@ -10,7 +10,7 @@
 <config>
     <modules>
         <Biztech_Trackorder>
-            <version>0.1.3</version>
+            <version>0.1.4</version>
         </Biztech_Trackorder>
     </modules>
     <frontend>

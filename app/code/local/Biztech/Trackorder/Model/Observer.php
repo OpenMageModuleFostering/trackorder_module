@@ -75,7 +75,7 @@ class Biztech_Trackorder_Model_Observer {
     
     public function addlinkFront(Varien_Event_Observer $observer) {
 
-        if (Mage::app()->getRequest()->getControllerName() == 'onepage') {
+        if (Mage::app()->getRequest()->getControllerName() != 'multishipping') {
             if (self::$_handleTrackLinkCounter > 1) {
                 return $this;
             }
